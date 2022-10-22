@@ -33,3 +33,9 @@ function comp(array1, array2){
   array1=array1.map(v=>v*v)
 return array2?array1.reduce((a,b)=>a+b,0)===array2.reduce((a,b)=>a+b,0):false
 }
+_______-
+this better 
+const comp = (a1, a2) => {
+  if (!a1 || !a2 || a1.length !== a2.length) return false;
+  return a1.map(x => x * x).sort().toString() === a2.sort().toString();
+}
